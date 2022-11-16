@@ -1,26 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC } from "react";
+import TodoApp from "./components/todo";
 
-function App() {
+interface Props {}
+
+const App: FC<Props> = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col w-full max-w-5xl p-4 mx-auto mt-12">
+      <h1 className="text-3xl font-bold">todo-cra</h1>
+      <TodoApp />
     </div>
   );
-}
+};
 
 export default App;
